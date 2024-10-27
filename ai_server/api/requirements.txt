@@ -1,0 +1,7 @@
+Flask
+flask_cors
+yt-dlp
+moviepy
+google-generativeai
+openai
+pydub
