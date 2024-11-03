@@ -1,0 +1,83 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for gradients and patterns -->
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1B3E"/>
+      <stop offset="100%" style="stop-color:#1a237e"/>
+    </linearGradient>
+    
+    <!-- Portal ring gradient -->
+    <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c4dff"/>
+      <stop offset="50%" style="stop-color:#b388ff"/>
+      <stop offset="100%" style="stop-color:#7c4dff"/>
+    </linearGradient>
+    
+    <!-- Energy flow gradient -->
+    <linearGradient id="energyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#64ffda"/>
+      <stop offset="100%" style="stop-color:#64ffda" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Main circle background -->
+  <circle cx="100" cy="100" r="85" fill="url(#bgGradient)"/>
+  
+  <!-- Outer glow -->
+  <circle cx="100" cy="100" r="83" fill="none" stroke="#3949ab" stroke-width="1" opacity="0.5"/>
+  <circle cx="100" cy="100" r="81" fill="none" stroke="#3949ab" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Portal rings -->
+  <circle cx="100" cy="100" r="65" fill="none" stroke="url(#ringGradient)" stroke-width="6"/>
+  <circle cx="100" cy="100" r="65" fill="none" stroke="#7c4dff" stroke-width="1" opacity="0.5">
+    <animate attributeName="r" values="65;67;65" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.2;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Entering video frame with depth -->
+  <rect x="25" y="75" width="45" height="45" rx="6" fill="#1e88e5" transform="rotate(-15, 47.5, 97.5)"/>
+  <rect x="28" y="78" width="39" height="39" rx="4" fill="#3949ab" transform="rotate(-15, 47.5, 97.5)"/>
+  <!-- Play symbol -->
+  <path d="M38 88 L55 97.5 L38 107 Z" fill="white" transform="rotate(-15, 47.5, 97.5)"/>
+  
+  <!-- Circuit pattern in center -->
+  <g transform="translate(100,100)">
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#64ffda" stroke-width="1.5"/>
+    <!-- Circuit lines -->
+    <path d="M-20 0 H20 M0 -20 V20" stroke="#64ffda" stroke-width="1.5"/>
+    <path d="M-14 -14 L14 14 M-14 14 L14 -14" stroke="#64ffda" stroke-width="1.5" opacity="0.5"/>
+    <!-- Circuit nodes -->
+    <circle cx="0" cy="0" r="3" fill="#64ffda"/>
+    <circle cx="-20" cy="0" r="2" fill="#64ffda"/>
+    <circle cx="20" cy="0" r="2" fill="#64ffda"/>
+    <circle cx="0" cy="-20" r="2" fill="#64ffda"/>
+    <circle cx="0" cy="20" r="2" fill="#64ffda"/>
+  </g>
+  
+  <!-- Emerging clips with depth effect -->
+  <g transform="translate(100,100)">
+    <!-- Bottom clip -->
+    <g transform="rotate(15)">
+      <rect x="30" y="15" width="35" height="20" rx="4" fill="#4527a0"/>
+      <rect x="33" y="18" width="29" height="14" rx="2" fill="#7c4dff"/>
+    </g>
+    <!-- Top clip -->
+    <g transform="rotate(-15)">
+      <rect x="30" y="-35" width="35" height="20" rx="4" fill="#4527a0"/>
+      <rect x="33" y="-32" width="29" height="14" rx="2" fill="#7c4dff"/>
+    </g>
+  </g>
+  
+  <!-- Energy flow particles -->
+  <g opacity="0.6">
+    <circle cx="65" cy="100" r="2" fill="#64ffda">
+      <animate attributeName="cx" values="65;135;65" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="75" cy="100" r="2" fill="#64ffda">
+      <animate attributeName="cx" values="75;145;75" dur="3s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
